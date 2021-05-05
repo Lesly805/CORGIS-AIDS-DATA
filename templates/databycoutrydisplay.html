@@ -1,0 +1,11 @@
+{% extends "databycountry.html" %}
+
+{% block body %}
+{{ super() }}
+
+<h2>{{ Country }}</h2>
+<p>Data Collecting Dates: {{ startDate }} to {{ endDate }}</p>
+<p>Total deaths: {{ AIDS-Related Deaths }}</p>
+<p>Total people Living with HIV: ${{ Total }}</p>
+<p>*Data from before 1990 or after 2015 is not available.</p>
+{% endblock %}
