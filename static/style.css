@@ -1,7 +1,3 @@
-body {
-
-}
-
-#content {
-     margin-left: 20px;
+div#content {
+     padding: 10px;
 }
