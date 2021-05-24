@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+
+
+{% extends "layout.html" %}
+
+{% set active_page = "page1" %}
+
+{% block title %}Page 2{% endblock %}
+
+{% block content %}
+    <!--page content-->
+
+
+
+<html> 
+  <head> 
+    <title> Data by by year </title>  
+  </head>
+  
+  <body>
+    
+    <form action="/fact">
+      <label for="year">Choose a year:</label>
+      <select name="year" id="year">
+        {{options}}
+      </select>
+      <br><br>
+      <input type = "submit" value = "get data" onchange="this.form.submit();">
+    </form>
+    
+    <p>{{Data of the year}}</p>
+    
+    </body>
+</html>
 
