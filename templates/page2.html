@@ -1,10 +1,24 @@
+<!DOCTYPE html>
+
+
 {% extends "layout.html" %}
 
-{% set active_page = "page2" %}
+{% set active_page = "popularity" %}
 
 {% block title %}Page 2{% endblock %}
 
-{% block content %}
+{% block heading %}page2{% endblock %}
+
     <!--page content-->
-    <h1>Page 2</h1>
-{% endblock %}
+
+    <h2>select a year<h2>
+    
+    <form action="/page2">
+      <select name="year" >
+        {{options}}
+      </select>
+      <br><br>
+      <input type = "submit" >
+    </form>
+    
+  {% endblock %}
