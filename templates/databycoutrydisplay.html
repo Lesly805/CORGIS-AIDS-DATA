@@ -1,11 +1,34 @@
-{% extends "databycountry.html" %}
+<!DOCTYPE html>
 
-{% block body %}
-{{ super() }}
 
-<h2>{{ Country }}</h2>
-<p>Data Collecting Dates: {{ startDate }} to {{ endDate }}</p>
-<p>Total deaths: {{ AIDS-Related Deaths }}</p>
-<p>Total people Living with HIV: ${{ Total }}</p>
-<p>*Data from before 1990 or after 2015 is not available.</p>
-{% endblock %}
+{% extends "layout.html" %}
+
+{% set active_page = "page1" %}
+
+{% block title %}Page 1{% endblock %}
+
+{% block content %}
+    <!--page content-->
+
+
+
+<html> 
+  <head> 
+    <title> Data by Country </title>  
+  </head>
+  
+  <body>
+    
+    <form action="/fact">
+      <label for="country">Choose a country:</label>
+      <select name="country" id="country">
+        {{options}}
+      </select>
+      <br><br>
+      <input type = "submit" value = "get data" onchange="this.form.submit();">
+    </form>
+    
+    <p>{{Data of country}}</p>
+    
+    </body>
+</html>
