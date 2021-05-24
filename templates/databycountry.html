@@ -1,18 +1,27 @@
+<!DOCTYPE html>
+
+
 {% extends "layout.html" %}
 
 {% set active_page = "databycountry" %}
 
-{% block title %}Data by Show{% endblock %}
+{% block title %}Page 1{% endblock %}
 
-{% block heading %}Data by Show{% endblock %}
-
-{% block body %}
-<h2>Select a show</h2>
-<form action="/databycountry">
-  <select name="Country">
-    {{ options }}
-  </select>
-  <br><br>
-  <input type="submit">
-</form>
+{% block content %}
+    <!--page content-->
+<html> 
+  <head> 
+    <title> Data by Country </title>  
+  </head>
+  
+  <body>
+    
+    <form action="/databycountry">
+      <select name="country" >
+        {{options}}
+      </select>
+      <br><br>
+      <input type = "submit" >
+    </form>
+    
 {% endblock %}
