@@ -3,9 +3,9 @@
 
 {% extends "layout.html" %}
 
-{% set active_page = "page1" %}
+{% set active_page = "databycountrydisplay" %}
 
-{% block title %}Page 1{% endblock %}
+{% block title %}Data by Country Display{% endblock %}
 
 {% block content %}
     <!--page content-->
@@ -19,7 +19,7 @@
   
   <body>
     
-    <form action="/fact">
+    <form action="/data">
       <label for="country">Choose a country:</label>
       <select name="country" id="country">
         {{options}}
@@ -27,8 +27,8 @@
       <br><br>
       <input type = "submit" value = "get data" onchange="this.form.submit();">
     </form>
-    
-    <p>{{Data of country}}</p>
-    
+   <p>{{countryFact}}</p>
     </body>
-</html>
+
+{% endblock %}
+
